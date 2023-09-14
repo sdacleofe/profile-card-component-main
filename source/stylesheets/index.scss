@@ -1,0 +1,174 @@
+// Primary
+$dark-cyan: hsl(185, 75%, 39%);
+$very-dark-desaturated-blue: hsl(229, 23%, 23%);
+$dark-grayish-blue: hsl(227, 10%, 46%);
+$white: hsl(0, 0%, 100%);
+
+// Neutral
+$dark-gray: hsl(0, 0%, 59%);
+$font-body-size: 1.1250em; 
+
+// Font
+$font-kumbh-family: 'Kumbh Sans', sans-serif;
+$font-kumbh-weight: 400, 700;
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: $dark-cyan;
+    font-family: $font-kumbh-family;
+    width: 100vw;
+    overflow-x: hidden;
+    
+    .container {
+        position: relative;
+        min-height: 100vh;
+        min-width: 100vw;
+        overflow: hidden;
+        
+        .background-top {
+            position: absolute;
+            top: -600px;
+            left: -400px;
+            width: 1000px;
+            height: 1000px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url("/profile-card-component-main/images/bg-pattern-top.svg");
+        }
+
+        .background-bottom {
+            position: absolute;
+            bottom: -600px;
+            right: -400px;
+            width: 1000px;
+            height: 1000px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url("/profile-card-component-main/images/bg-pattern-bottom.svg");
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+
+            .card {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                max-width: 370px;
+                height: 400px;
+                width: 90%;
+                background-color: $white;
+                border-radius: 20px;
+                overflow: hidden;
+                z-index: 1;
+
+                .card-cover-photo {
+                    display: flex;
+                    justify-content: center;
+                    align-items:end;
+                    position: relative;
+                    background-image: url("/profile-card-component-main/images/bg-pattern-card.svg");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    height: 160px;
+                    width: 100%;
+
+                    .image {
+                        position: absolute;
+                        bottom: -50px;
+                        background-image: url("/profile-card-component-main/images/image-victor.jpg");
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 100%;
+                        border: 4px solid;
+                        border-color: $white;
+                    }
+                }
+
+                .card-content {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+
+                    .user-details {
+                        display: flex;
+                        flex-direction: column;
+                        padding-top: 70px;
+
+                        h1 {
+                            margin-bottom: 0;
+                            font-size: $font-body-size;
+                            font-weight: nth($font-kumbh-weight, 2 );
+
+                            span {
+                                color: $dark-grayish-blue;
+                                font-weight: nth($font-kumbh-weight, 1 );
+                            }
+                        }
+
+                        p {
+                            color: $dark-gray;
+                            margin-top: 10px;
+                            margin-bottom: 20px;
+                            font-size: 1em;
+                            font-weight: nth($font-kumbh-weight, 1 );
+                        }
+                    }
+
+                    .user-metrics {
+                        border-top: 2px solid rgba(106, 111, 129, 0.2);
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        gap: 50px;
+                        width: 100%;
+
+                        .metric-row {
+                            .stat {
+                                font-size: $font-body-size;
+                                margin-top: 25px;
+                                margin-bottom: 0;
+                                padding-bottom: 0;
+                            }
+
+                            p {
+                                margin-top: 10px;
+                                padding-top: 0;
+                                padding-bottom: 10px;
+                                font-size: 0.8em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    footer {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 15px 0;
+
+        span {
+            color: $white;
+            text-align: center;
+    
+            a {
+                color: $white;
+            }
+        }
+    }
+}
