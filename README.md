@@ -47,10 +47,6 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 The user profile photo and the background was the most challenging part of building this project. Even so, I solved it with CSS position and FlexBox.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
 ```scss
 .card-cover-photo {
   display: flex;
